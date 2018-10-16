@@ -9,15 +9,15 @@ import com.yqp.web.service.UserService;
 @Controller
 public class IndexController {
 
-	@Autowired
-	private UserService userService;
+    @Autowired
+    private UserService userService;
 
-	@RequestMapping("/index")
-	public ModelAndView index(String word) {
-		String str = userService.say(word);
-		ModelAndView view = new ModelAndView("index");
-		view.addObject("str", str);
-		return view;
-	}
+    @RequestMapping("/index")
+    public ModelAndView index(String word) {
+        String str = userService.say(word);
+        ModelAndView view = new ModelAndView("index");
+        view.addObject("str", str);
+        return view;
+    }
 
 }

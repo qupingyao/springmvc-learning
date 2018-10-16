@@ -1,0 +1,5 @@
+tomcat启动逻辑：
+1.针对每个web应用建一个ServletContext
+2.实例化所有ServletContextListener
+3.发布ServletContextEvent事件依次触发ServletContextListener的容器初始化事件
+4.根据配置实例化部分Servlet
