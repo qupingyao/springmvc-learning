@@ -30,9 +30,9 @@ public class MyHttpServlet2 extends HttpServlet {
         logger.info((String) this.getContextAttr(super.getServletContext(), "val"));
         logger.info((String) this.getRequestAttr(req, "val"));
         logger.info(this.getRequestParam(req, "val"));
-        this.getBeanFromAppCtx(super.getServletContext(),"a", A.class);
-        this.getBeanFromAppCtx(super.getServletContext(),"b", B.class);
-        this.getBeanFromAppCtx(super.getServletContext(),"c", C.class);
+        this.getBeanFromAppCtx(super.getServletContext(), "a", A.class);
+        this.getBeanFromAppCtx(super.getServletContext(), "b", B.class);
+        this.getBeanFromAppCtx(super.getServletContext(), "c", C.class);
     }
 
     private Object getContextAttr(ServletContext sc, String name) {

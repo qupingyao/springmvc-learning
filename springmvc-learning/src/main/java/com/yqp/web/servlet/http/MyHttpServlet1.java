@@ -28,20 +28,21 @@ public class MyHttpServlet1 extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {
         logger.info("do-doGet()");
-        this.setRequestAttr(req,"val","cba");
-        this.getBeanFromAppCtx(super.getServletContext(),"a",A.class);
-        this.getBeanFromAppCtx(super.getServletContext(),"b",B.class);
-        this.getBeanFromAppCtx(super.getServletContext(),"c",C.class);
-        this.forward(super.getServletContext(),"/httpservlet/2",req,resp);
+        this.printRequestSys(req);
+        this.setRequestAttr(req, "val", "cba");
+        this.getBeanFromAppCtx(super.getServletContext(), "a", A.class);
+        this.getBeanFromAppCtx(super.getServletContext(), "b", B.class);
+        this.getBeanFromAppCtx(super.getServletContext(), "c", C.class);
+        this.forward(super.getServletContext(), "/httpservlet/2", req, resp);
     }
 
-    private void getRequestSys(HttpServletRequest req) {
+    private void printRequestSys(HttpServletRequest req) {
         logger.info("requesturi:" + req.getRequestURI());
         logger.info("requesturl:" + req.getRequestURL());
     }
 
-    private void setRequestAttr(HttpServletRequest req, String name,Object object) {
-        req.setAttribute(name,object);
+    private void setRequestAttr(HttpServletRequest req, String name, Object object) {
+        req.setAttribute(name, object);
     }
 
     private void forward(ServletContext sc, String url, HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {

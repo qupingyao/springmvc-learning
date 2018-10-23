@@ -36,7 +36,7 @@
         <url-pattern>/</url-pattern>
     </servlet-mapping>-->
 
-    <servlet>
+    <!--<servlet>
         <servlet-name>myservlet1</servlet-name>
         <servlet-class>com.yqp.web.servlet.MyServlet1</servlet-class>
         <load-on-startup>2</load-on-startup>
@@ -54,9 +54,9 @@
     <servlet-mapping>
         <servlet-name>myservlet2</servlet-name>
         <url-pattern>/servlet/2</url-pattern>
-    </servlet-mapping>
+    </servlet-mapping>-->
 
-    <servlet>
+    <!--<servlet>
         <servlet-name>myhttpservlet1</servlet-name>
         <servlet-class>com.yqp.web.servlet.http.MyHttpServlet1</servlet-class>
         <load-on-startup>2</load-on-startup>
@@ -74,7 +74,6 @@
     <servlet-mapping>
         <servlet-name>myhttpservlet2</servlet-name>
         <url-pattern>/httpservlet/2</url-pattern>
-    </servlet-mapping>
-
+    </servlet-mapping>-->
 
 </web-app>

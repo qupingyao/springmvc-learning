@@ -3,3 +3,9 @@ tomcat启动逻辑：
 2.实例化所有ServletContextListener
 3.发布ServletContextEvent事件依次触发ServletContextListener的容器初始化事件
 4.根据配置实例化部分Servlet
+
+tomcat url-pattern匹配(优先级高->低)：
+1.精确匹配
+2.路径匹配(以/*结尾,/*匹配一切)
+3.后缀匹配(以*.开头)
+4.缺省匹配(/,匹配一切)
